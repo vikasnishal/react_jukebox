@@ -1,0 +1,554 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff)
+      format("woff");
+}
+.bodyClass {
+  background: url("./images/final_background.jpg");
+  background-repeat: repeat;
+}
+.clickable {
+  cursor: pointer;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+}
+label {
+  text-align: right;
+  margin-top: 5px;
+  font-size: 14px;
+}
+.row-margin-zero {
+  margin: 0px;
+}
+.padding-zero {
+  padding: 0px !important;
+}
+hr {
+  margin-top: 5px !important;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q: before,q: after {
+  content: "";
+}
+
+abbr,
+acronym {
+  border: 0;
+}
+
+html {
+  background-color: #8c8989;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body,
+input {
+  font: 20px/1 "Montserrat", Arial, sans-serif;
+}
+
+h1 strong,
+#playlist,
+.video-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+}
+
+header {
+  background: linear-gradient(to right, rgb(51, 42, 37), rgb(56, 55, 60));
+  color: white;
+  height: 80px;
+  padding: 20px 0;
+}
+.appBody {
+  margin: 0 auto 100px;
+  position: relative;
+  width: 1100px;
+  margin: auto;
+}
+.app-title {
+  float: left;
+  max-width: 160px;
+  max-height: 35px;
+  margin-right: 15px;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+.container {
+  width: 1100px;
+  padding: 0px;
+}
+.overlay {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  right: 50%;
+  top: 25%;
+}
+.fadeLoading {
+  opacity: 0.2;
+}
+/*classes realted to header*/
+#search {
+  float: left;
+  height: 40px;
+  position: relative;
+  width: 780px;
+}
+
+#query {
+  background: linear-gradient(to right, rgb(245, 236, 236), rgb(206, 203, 216));
+  border: none;
+  border-radius: 20px;
+  color: black;
+  float: left;
+  height: 35px;
+  line-height: 30px;
+  padding: 5px 20px;
+  width: 730px;
+}
+
+#query:focus {
+  outline: none;
+}
+nav {
+  float: right;
+  line-height: 40px;
+  text-align: center;
+  width: 180px;
+}
+.loginLink {
+  margin-top: 10px;
+  font-size: 13px;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.loginLink:hover {
+  color: rgb(156, 156, 235);
+}
+.divider {
+  position: relative;
+  width: 1px;
+  font-size: 14px;
+}
+/**/
+#play,
+#pause {
+  cursor: pointer;
+}
+
+#pause {
+  display: none;
+}
+.home-right-side {
+  padding: 0px;
+}
+.playerControls {
+  /*position: absolute;*/
+  right: 0px;
+  top: 560px;
+  padding-left: 15px;
+  background: rgb(34, 36, 42);
+}
+
+.controlsImage {
+  max-width: 29px;
+  max-height: 36px;
+  cursor: pointer;
+  margin: 6px 10px;
+}
+.controlsShuffleImage {
+  max-width: 29px;
+  max-height: 29px;
+  cursor: pointer;
+  margin: 6px 10px;
+}
+.fadeImage {
+  opacity: 0.4;
+  cursor: default;
+}
+.fadeShuffleImage {
+  opacity: 0.4;
+}
+
+.repeatControl {
+  max-height: 29px;
+  cursor: pointer;
+  margin: 6px 10px;
+}
+/*classes related to results*/
+#results {
+  background: #eff0f2;
+  height: 944px;
+  overflow-x: hidden;
+}
+.playVideo {
+  max-width: 30px;
+  max-height: 30px;
+  opacity: 0;
+  transition: opacity 1s;
+  float: right;
+  position: relative;
+  top: -25px;
+}
+
+.video {
+  cursor: pointer;
+  min-height: 110px;
+  padding: 10px;
+  padding-left: 140px;
+  position: relative;
+}
+
+.video:nth-child(2n-1) {
+  background: white;
+}
+
+.video-image {
+  float: left;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.video-title {
+  padding-top: 5px;
+  font-size: 17px;
+}
+
+.video-author {
+  color: #df1f1f;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.video-description {
+  color: #727785;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.video:hover {
+  background: #22242a;
+  color: white;
+}
+.video:hover > .playVideo {
+  opacity: 1;
+}
+.video:hover > .video-description {
+  color: rgb(156, 156, 235);
+}
+/**/
+#player,
+#playlist {
+  background: white;
+  height: 480px;
+  overflow: hidden;
+  /*position: absolute;*/
+  margin-left: 0px;
+  top: 80px;
+  /*width: 550px;*/
+}
+
+#player {
+  background: black;
+}
+
+#playlist {
+  background: #22242a;
+  color: #727785;
+  font-size: 16px;
+  height: 379px;
+  overflow-x: hidden;
+  /*top: 600px;*/
+  /*width: 550px;*/
+  /*margin-bottom: 20px;*/
+}
+
+#current {
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-top: 1px solid #33363f;
+}
+
+#playlist ol,
+#playlist li {
+  cursor: pointer;
+}
+
+#playlist ol {
+  border-bottom: 1px solid #33363f;
+  height: 379px;
+  overflow-x: hidden;
+}
+
+#playlist li {
+  border-top: 1px solid #33363f;
+  cursor: pointer;
+}
+
+#history li {
+  color: #33522d;
+}
+
+.item-title {
+  margin-right: 80px;
+  padding: 10px 20px;
+}
+
+.item-title:hover {
+  background: #1171a2;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid #1171a2;
+}
+
+.item-delete {
+  color: #ac0809;
+  float: right;
+  text-align: center;
+  padding: 10px 0;
+  width: 80px;
+  margin-right: 3px;
+  border-radius: 20px;
+}
+
+.item-delete:hover {
+  background: #ac0809;
+  color: white;
+}
+
+#history .item-title:hover {
+  background: #33522d;
+  color: white;
+}
+
+#tabs,
+#tabs a {
+  background: #333;
+  height: 45px;
+  left: 0;
+  line-height: 45px;
+  /*position: absolute;*/
+  text-align: center;
+  /*width: 100%;*/
+}
+
+#tabs {
+  bottom: 0;
+}
+
+#tabs a {
+  color: #666;
+  width: 50%;
+}
+
+#tabs a:last-child {
+  left: 50%;
+}
+.on {
+  background: #39404f !important;
+  color: white;
+}
+.playlistState {
+  height: 44px;
+  padding-top: 12px;
+  text-align: center;
+  font-size: 16px;
+  background-color: rgb(34, 36, 42);
+}
+
+footer {
+  color: white;
+  font-size: 12px;
+  padding-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  width: 300px;
+  margin-top: 20px;
+  margin: auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover,
+footer a:link {
+  color: rgb(156, 156, 235);
+  text-decoration: none;
+}
+footer em {
+  float: right;
+  font-style: normal;
+}
+.modal-content {
+  height: 330px !important;
+}
+.login-modal-email {
+  padding-left: 20px;
+  display: block;
+  margin-left: 149px;
+  margin-top: 30px;
+  height: 50px;
+  width: 300px;
+  font-size: 16px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px rgb(192, 190, 190) solid;
+}
+.login-modal-password {
+  padding-left: 20px;
+  display: block;
+  margin-left: 149px;
+  height: 50px;
+  width: 300px;
+  font-size: 16px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px rgb(192, 190, 190) solid;
+  border-top: none;
+}
+.login-modal-button {
+  display: block;
+  margin-left: 149px;
+  margin-top: 20px;
+  height: 40px;
+  width: 300px;
+  background-color: #3fa654;
+  color: white;
+}
+.login-modal-action {
+  display: block;
+  margin-left: 149px;
+  margin-top: 10px;
+  width: 300px;
+  text-align: center;
+  font-size: 14px;
+}
+.signup-modal-button {
+  display: block;
+  margin-left: 149px;
+  margin-top: 10px;
+  height: 40px;
+  width: 300px;
+  background-image: radial-gradient(
+    ellipse at center,
+    rgba(75, 102, 125, 1) 0%,
+    rgba(68, 133, 199, 1) 100%
+  );
+  color: white;
+}
+.register-modal-container {
+  padding: 30px 20px;
+}
+.register-modal-name {
+  font-size: 13px;
+  height: 30px;
+}
+.register-modal-lastname {
+  margin-left: 10px;
+  font-size: 13px;
+  height: 30px;
+}
+.register-modal-email {
+  margin-top: 10px;
+}
+.register-modal-emailInput {
+  padding-left: 15px;
+  font-size: 13px;
+  width: 290px;
+  height: 30px;
+}
+.register-modal-password {
+  margin-top: 10px;
+}
+.register-modal-signup-button {
+  display: block;
+  margin-left: 139px;
+  margin-top: 15px;
+  height: 40px;
+  width: 290px;
+  background-image: radial-gradient(
+    ellipse at center,
+    rgba(75, 102, 125, 1) 0%,
+    rgba(68, 133, 199, 1) 100%
+  );
+  color: white;
+}
