@@ -1,10 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import playIcon from "../images/play-icon2.gif";
+import changeVideo from "../actionCreators/changeVideo";
 
 class SearchVideoMeta extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   addVideoToPlaylist({ id, title } = {}) {
     let playlist = JSON.parse(localStorage.getItem("jukeboxPlaylist"));
     if (playlist === null) {
@@ -33,10 +32,25 @@ class SearchVideoMeta extends React.Component {
         ) : null}
 
         {thumbnail ? (
-          <img src={playIcon} className="playVideo" alt="play video" />
+          <img
+            src={playIcon}
+            className="playVideo"
+            alt="play video"
+            onClick={this.props.handleVideoChange}
+            data-videoid={id}
+          />
         ) : null}
       </div>
     );
   }
 }
-export default SearchVideoMeta;
+const mapDispatchToProps = dispatch => ({
+  handleVideoChange(event) {
+    dispatch(changeVideo(event.target.dataset.videoid));
+  }
+});
+
+export default connect(
+  "",
+  mapDispatchToProps
+)(SearchVideoMeta);

@@ -2,14 +2,9 @@ import React from "react";
 import PlayVideoMeta from "./PlayVideoMeta";
 
 class Playlist extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playlist: []
-    };
-  }
   componentDidMount() {
-    let playlist = JSON.parse(localStorage.getItem("jukeboxPlaylist"));
+    // let playlist = JSON.parse(localStorage.getItem("jukeboxPlaylist"));
+    let playlist = [];
     if (playlist) {
       this.setState({
         playlist
@@ -18,7 +13,7 @@ class Playlist extends React.Component {
   }
   render() {
     return (
-      <div className="col-xs-12 col-md-6">
+      <div>
         <ol>
           {this.state.playlist.map(video => {
             return (
