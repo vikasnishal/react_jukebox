@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import logo from "../images/title-logo2.png";
 import searchIcon from "../images/search.png";
 import changeQuery from "../actionCreators/changeQuery";
-import getResults from "../actionCreators/getResults";
+import getResults from "../actionCreators/setResults";
 
 class SearchBox extends React.Component {
   //   handleFormSubmit() {

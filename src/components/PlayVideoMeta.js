@@ -1,13 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
+import changeVideo from "../actionCreators/changeVideo";
+import editPlaylist from "../actionCreators/editPlaylist";
 
 class PlayVideoMeta extends React.Component {
   render() {
-    const { title } = this.props;
+    const { title, id } = this.props;
     return (
-      <li>
+      <li
+        className="playlist-video"
+        onClick={this.props.playVideo}
+        data-id={id}
+      >
         <p
           className="item-delete"
-          data-ng-click="delete(upcoming, video.id,'new')"
+          data-id={id}
+          data-delete="true"
+          onClick={this.props.deleteVideo}
         >
           delete
         </p>
@@ -18,4 +27,17 @@ class PlayVideoMeta extends React.Component {
     );
   }
 }
-export default PlayVideoMeta;
+const mapDispatchToProps = dispatch => ({
+  playVideo(event) {
+    dispatch(changeVideo(event.currentTarget.dataset.id));
+  },
+  deleteVideo(event) {
+    event.stopPropagation();
+    let data = JSON.parse(JSON.stringify(event.target.dataset));
+    dispatch(editPlaylist(data));
+  }
+});
+export default connect(
+  "",
+  mapDispatchToProps
+)(PlayVideoMeta);

@@ -6,7 +6,7 @@ class VideoPlayer extends React.Component {
   render() {
     const opts = {
       height: "480",
-      width: "570",
+      width: "565",
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 1

@@ -1,6 +1,6 @@
 import axios from "axios";
-export default function getResultsFunction() {
-  return function getResultsThunk(dispatch, getState) {
+export default function setResultsFunction() {
+  return function setResultsThunk(dispatch, getState) {
     let { query = "" } = getState();
     axios
       .get("https://www.googleapis.com/youtube/v3/search", {

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import SearchVideoMeta from "./SearchVideoMeta";
-import getResults from "../actionCreators/getResults";
+import getResults from "../actionCreators/setResults";
 
 class SearchResults extends React.Component {
   componentDidMount() {
@@ -9,7 +9,7 @@ class SearchResults extends React.Component {
   }
   render() {
     return (
-      <div className="col-xs-12 col-md-6">
+      <div className="col-xs-12 col-md-6 padding-zero">
         {this.props.results.map(video => {
           return (
             <SearchVideoMeta

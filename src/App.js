@@ -15,10 +15,10 @@ class App extends React.Component {
           <Header />
           <div className="container">
             <div className="row">
-              <SearchResults className="col-xs-12 col-md-6" />
-              <div className="col-xs-12 col-md-6">
+              <SearchResults />
+              <div className="col-xs-12 col-md-6 padding-zero">
                 <VideoPlayer />
-                {/* <Playlist /> */}
+                <Playlist />
               </div>
             </div>
           </div>

@@ -1,21 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
 import PlayVideoMeta from "./PlayVideoMeta";
+import setPlaylist from "../actionCreators/editPlaylist";
 
 class Playlist extends React.Component {
   componentDidMount() {
-    // let playlist = JSON.parse(localStorage.getItem("jukeboxPlaylist"));
-    let playlist = [];
-    if (playlist) {
-      this.setState({
-        playlist
-      });
-    }
+    this.props.getPlaylist();
   }
   render() {
     return (
-      <div>
+      <div id="playlist">
         <ol>
-          {this.state.playlist.map(video => {
+          {this.props.playlist.map(video => {
             return (
               <PlayVideoMeta key={video.id} id={video.id} title={video.title} />
             );
@@ -25,5 +21,15 @@ class Playlist extends React.Component {
     );
   }
 }
-
-export default Playlist;
+const mapStateToProps = ({ playlist = [] }) => ({
+  playlist
+});
+const mapDispatchToProps = dispatch => ({
+  getPlaylist() {
+    dispatch(setPlaylist());
+  }
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Playlist);

@@ -2,27 +2,18 @@ import React from "react";
 import { connect } from "react-redux";
 import playIcon from "../images/play-icon2.gif";
 import changeVideo from "../actionCreators/changeVideo";
+import setPlaylist from "../actionCreators/editPlaylist";
 
 class SearchVideoMeta extends React.Component {
-  addVideoToPlaylist({ id, title } = {}) {
-    let playlist = JSON.parse(localStorage.getItem("jukeboxPlaylist"));
-    if (playlist === null) {
-      playlist = [];
-      let obj = {
-        id,
-        title
-      };
-      playlist.push(obj);
-      localStorage.setItem("jukeboxPlaylist", JSON.stringify(playlist));
-    } else {
-      playlist.push({ id, title });
-      localStorage.setItem("jukeboxPlaylist", JSON.stringify(playlist));
-    }
-  }
   render() {
     const { thumbnail, title, description, id } = this.props;
     return (
-      <div className="video" onClick={this.addVideoToPlaylist({ id, title })}>
+      <div
+        className="video"
+        onClick={this.props.addVideoToPlaylist}
+        data-id={id}
+        data-title={title}
+      >
         {thumbnail ? (
           <img className="video-image" src={thumbnail} alt="video " />
         ) : null}
@@ -37,7 +28,7 @@ class SearchVideoMeta extends React.Component {
             className="playVideo"
             alt="play video"
             onClick={this.props.handleVideoChange}
-            data-videoid={id}
+            data-id={id}
           />
         ) : null}
       </div>
@@ -46,7 +37,12 @@ class SearchVideoMeta extends React.Component {
 }
 const mapDispatchToProps = dispatch => ({
   handleVideoChange(event) {
-    dispatch(changeVideo(event.target.dataset.videoid));
+    event.stopPropagation();
+    dispatch(changeVideo(event.target.dataset.id));
+  },
+  addVideoToPlaylist(event) {
+    let data = JSON.parse(JSON.stringify(event.currentTarget.dataset));
+    dispatch(setPlaylist(data));
   }
 });
 
