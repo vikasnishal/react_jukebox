@@ -11,7 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
+        <div className="appBody">
           <Header />
           <div className="container">
             <div className="row">

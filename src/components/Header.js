@@ -4,9 +4,9 @@ import SearchBox from "./SearchBox";
 class Header extends React.Component {
   render() {
     return (
-      <header>
+      <header className="row">
         <SearchBox />
-        <div className="span4">
+        <div className="col-md-2">
           <span className=" loginLink" ng-click="login()">
             LOGIN
           </span>
