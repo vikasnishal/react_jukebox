@@ -161,8 +161,6 @@ header {
 #search {
   float: left;
   height: 40px;
-  position: relative;
-  width: 780px;
 }
 
 #query {
@@ -174,7 +172,7 @@ header {
   height: 35px;
   line-height: 30px;
   padding: 5px 20px;
-  width: 730px;
+  width: 710px;
 }
 
 #query:focus {
@@ -192,6 +190,8 @@ nav {
   display: inline-block;
   cursor: pointer;
   letter-spacing: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 .loginLink:hover {
   color: rgb(156, 156, 235);
