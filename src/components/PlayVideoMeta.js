@@ -4,6 +4,9 @@ import changeVideo from "../actionCreators/changeVideo";
 import editPlaylist from "../actionCreators/editPlaylist";
 
 class PlayVideoMeta extends React.Component {
+  componentWillUnmount() {
+    console.log("playlist element component destroyed");
+  }
   render() {
     const { title, id } = this.props;
     return (

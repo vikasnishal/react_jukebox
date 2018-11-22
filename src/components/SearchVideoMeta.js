@@ -5,6 +5,12 @@ import changeVideo from "../actionCreators/changeVideo";
 import setPlaylist from "../actionCreators/editPlaylist";
 
 class SearchVideoMeta extends React.Component {
+  componentDidMount() {
+    console.log(`${this.props.id} has rendered`);
+  }
+  componentWillUnmount() {
+    console.log(`${this.props.id} has unmounted`);
+  }
   render() {
     const { thumbnail, title, description, id } = this.props;
     return (

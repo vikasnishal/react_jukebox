@@ -145,6 +145,7 @@ header {
 .container {
   width: 1100px;
   padding: 0px;
+  padding-bottom: 20px;
 }
 .overlay {
   display: block;
@@ -268,9 +269,6 @@ nav {
   padding: 10px;
   padding-left: 140px;
   position: relative;
-}
-
-.video:nth-child(2n-1) {
   background: white;
 }
 
@@ -328,7 +326,7 @@ nav {
   background: #22242a;
   color: #727785;
   font-size: 16px;
-  height: 379px;
+  height: 425px;
   overflow-x: hidden;
   /*top: 600px;*/
   /*width: 550px;*/

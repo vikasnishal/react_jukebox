@@ -7,6 +7,7 @@ class Playlist extends React.Component {
   componentDidMount() {
     this.props.getPlaylist();
   }
+
   render() {
     return (
       <div id="playlist">
