@@ -1,12 +1,15 @@
 {
-  "main.js": "/react_jukebox/static/js/main.4b963a62.chunk.js",
-  "main.js.map": "/react_jukebox/static/js/main.4b963a62.chunk.js.map",
-  "static/js/1.fd1e0a47.chunk.js": "/react_jukebox/static/js/1.fd1e0a47.chunk.js",
-  "static/js/1.fd1e0a47.chunk.js.map": "/react_jukebox/static/js/1.fd1e0a47.chunk.js.map",
+  "main.css": "/react_jukebox/static/css/main.07b3fe81.chunk.css",
+  "main.js": "/react_jukebox/static/js/main.71c7e374.chunk.js",
+  "main.js.map": "/react_jukebox/static/js/main.71c7e374.chunk.js.map",
+  "static/js/1.f36d7696.chunk.js": "/react_jukebox/static/js/1.f36d7696.chunk.js",
+  "static/js/1.f36d7696.chunk.js.map": "/react_jukebox/static/js/1.f36d7696.chunk.js.map",
   "runtime~main.js": "/react_jukebox/static/js/runtime~main.e3d3a001.js",
   "runtime~main.js.map": "/react_jukebox/static/js/runtime~main.e3d3a001.js.map",
+  "static/css/main.07b3fe81.chunk.css.map": "/react_jukebox/static/css/main.07b3fe81.chunk.css.map",
   "static/media/title-logo2.png": "/react_jukebox/static/media/title-logo2.45965589.png",
+  "static/media/style.css": "/react_jukebox/static/media/final_background.d8663443.jpg",
   "index.html": "/react_jukebox/index.html",
-  "precache-manifest.6303390b562dece455f9a756b1103145.js": "/react_jukebox/precache-manifest.6303390b562dece455f9a756b1103145.js",
+  "precache-manifest.03d3056fc4304a49dccd2e78c3ff3c02.js": "/react_jukebox/precache-manifest.03d3056fc4304a49dccd2e78c3ff3c02.js",
   "service-worker.js": "/react_jukebox/service-worker.js"
 }
