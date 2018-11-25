@@ -6,56 +6,64 @@
     url(https://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff)
       format("woff");
 }
+
 .bodyClass {
-  background: url("./images/final_background.jpg");
+  background: url(./images/final_background.jpg);
   background-repeat: repeat;
 }
+
 .clickable {
   cursor: pointer;
 }
+
+blockquote,
 body,
+dd,
 div,
 dl,
 dt,
-dd,
-ul,
-ol,
-li,
+fieldset,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-pre,
-form,
-fieldset,
 input,
-textarea,
+li,
+ol,
 p,
-blockquote,
+pre,
+td,
+textarea,
 th,
-td {
+ul {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-family: "Open Sans";
   margin: 0;
   padding: 0;
 }
+
 label {
   text-align: right;
   margin-top: 5px;
   font-size: 14px;
 }
+
 .row-margin-zero {
-  margin: 0px;
+  margin: 0;
 }
+
 .padding-zero {
-  padding: 0px !important;
+  padding: 0 !important;
 }
+
 hr {
   margin-top: 5px !important;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -73,7 +81,7 @@ code,
 dfn,
 var {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 ol,
@@ -93,7 +101,7 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 abbr,
@@ -112,28 +120,29 @@ a {
 
 body,
 input {
-  font: 20px/1 "Montserrat", Arial, sans-serif;
+  font: 20px/1 Montserrat, Arial, sans-serif;
 }
 
-h1 strong,
 #playlist,
-.video-title {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: bold;
+.video-title,
+h1 strong {
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 700;
 }
 
 header {
-  background: linear-gradient(to right, rgb(51, 42, 37), rgb(56, 55, 60));
-  color: white;
+  background: linear-gradient(to right, #332a25, #38373c);
+  color: #fff;
   height: 80px;
   padding: 20px 0;
 }
+
 .appBody {
-  margin: 0 auto 100px;
   position: relative;
   width: 1100px;
   margin: auto;
 }
+
 .app-title {
   float: left;
   max-width: 160px;
@@ -142,10 +151,12 @@ header {
   margin-top: 4px;
   margin-left: 10px;
 }
+
 .container {
   width: 1100px;
-  padding: 0px;
+  padding: 0;
 }
+
 .overlay {
   display: block;
   position: fixed;
@@ -154,71 +165,77 @@ header {
   right: 50%;
   top: 25%;
 }
+
 .fadeLoading {
   opacity: 0.2;
 }
-/*classes realted to header*/
+
 #search {
   float: left;
   height: 40px;
+  position: relative;
+  max-width: 730px;
 }
 
 #query {
-  background: linear-gradient(to right, rgb(245, 236, 236), rgb(206, 203, 216));
+  background: linear-gradient(to right, #f5ecec, #cecbd8);
   border: none;
   border-radius: 20px;
-  color: black;
+  color: #000;
   float: left;
   height: 35px;
   line-height: 30px;
   padding: 5px 20px;
-  width: 710px;
+  width: 700px;
 }
 
 #query:focus {
-  outline: none;
+  outline: 0;
 }
+
 nav {
   float: right;
   line-height: 40px;
   text-align: center;
   width: 180px;
 }
+
 .loginLink {
   margin-top: 10px;
   font-size: 13px;
   display: inline-block;
   cursor: pointer;
   letter-spacing: 1px;
-  padding-right: 5px;
-  padding-left: 5px;
 }
+
 .loginLink:hover {
-  color: rgb(156, 156, 235);
+  color: #9c9ceb;
 }
+
 .divider {
   position: relative;
   width: 1px;
   font-size: 14px;
 }
-/**/
-#play,
-#pause {
+
+#pause,
+#play {
   cursor: pointer;
 }
 
 #pause {
   display: none;
 }
+
 .home-right-side {
-  padding: 0px;
+  padding: 0;
 }
+
 .playerControls {
-  /*position: absolute;*/
-  right: 0px;
+  right: 0;
   top: 560px;
   padding-left: 15px;
-  background: rgb(34, 36, 42);
+  background: #22242a;
 }
 
 .controlsImage {
@@ -227,16 +244,19 @@ nav {
   cursor: pointer;
   margin: 6px 10px;
 }
+
 .controlsShuffleImage {
   max-width: 29px;
   max-height: 29px;
   cursor: pointer;
   margin: 6px 10px;
 }
+
 .fadeImage {
   opacity: 0.4;
   cursor: default;
 }
+
 .fadeShuffleImage {
   opacity: 0.4;
 }
@@ -246,12 +266,13 @@ nav {
   cursor: pointer;
   margin: 6px 10px;
 }
-/*classes related to results*/
+
 #results {
   background: #eff0f2;
   height: 944px;
   overflow-x: hidden;
 }
+
 .playVideo {
   max-width: 30px;
   max-height: 30px;
@@ -271,7 +292,7 @@ nav {
 }
 
 .video:nth-child(2n-1) {
-  background: white;
+  background: #fff;
 }
 
 .video-image {
@@ -300,28 +321,28 @@ nav {
 
 .video:hover {
   background: #22242a;
-  color: white;
+  color: #fff;
 }
+
 .video:hover > .playVideo {
   opacity: 1;
 }
+
 .video:hover > .video-description {
-  color: rgb(156, 156, 235);
+  color: #9c9ceb;
 }
-/**/
+
 #player,
 #playlist {
-  background: white;
+  background: #fff;
   height: 480px;
   overflow: hidden;
-  /*position: absolute;*/
-  margin-left: 0px;
+  margin-left: 0;
   top: 80px;
-  /*width: 550px;*/
 }
 
 #player {
-  background: black;
+  background: #000;
 }
 
 #playlist {
@@ -330,19 +351,17 @@ nav {
   font-size: 16px;
   height: 379px;
   overflow-x: hidden;
-  /*top: 600px;*/
-  /*width: 550px;*/
-  /*margin-bottom: 20px;*/
 }
 
 #current {
-  color: white;
+  color: #fff;
   font-size: 20px;
   padding: 10px 20px;
   border-top: 1px solid #33363f;
 }
 
-li.playlist-video {
+#playlist li,
+#playlist ol {
   cursor: pointer;
 }
 
@@ -364,13 +383,21 @@ li.playlist-video {
 .item-title {
   margin-right: 80px;
   padding: 10px 20px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .item-title:hover {
   background: #1171a2;
-  color: white;
+  color: #fff;
   border-radius: 20px;
-  border: 1px solid #1171a2;
+}
+
+.playlist-video-active {
+  background: #1171a2;
+  color: #fff;
+  border-radius: 20px;
 }
 
 .item-delete {
@@ -385,12 +412,12 @@ li.playlist-video {
 
 .item-delete:hover {
   background: #ac0809;
-  color: white;
+  color: #fff;
 }
 
 #history .item-title:hover {
   background: #33522d;
-  color: white;
+  color: #fff;
 }
 
 #tabs,
@@ -399,9 +426,7 @@ li.playlist-video {
   height: 45px;
   left: 0;
   line-height: 45px;
-  /*position: absolute;*/
   text-align: center;
-  /*width: 100%;*/
 }
 
 #tabs {
@@ -416,46 +441,50 @@ li.playlist-video {
 #tabs a:last-child {
   left: 50%;
 }
+
 .on {
   background: #39404f !important;
-  color: white;
+  color: #fff;
 }
+
 .playlistState {
   height: 44px;
   padding-top: 12px;
   text-align: center;
   font-size: 16px;
-  background-color: rgb(34, 36, 42);
+  background-color: #22242a;
 }
 
 footer {
-  color: white;
+  color: #fff;
   font-size: 12px;
   padding-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   width: 300px;
-  margin-top: 20px;
   margin: auto;
   letter-spacing: 1px;
   cursor: pointer;
 }
 
 footer a {
-  color: white;
+  color: #fff;
 }
 
 footer a:hover,
 footer a:link {
-  color: rgb(156, 156, 235);
+  color: #9c9ceb;
   text-decoration: none;
 }
+
 footer em {
   float: right;
   font-style: normal;
 }
+
 .modal-content {
   height: 330px !important;
 }
+
 .login-modal-email {
   padding-left: 20px;
   display: block;
@@ -466,8 +495,9 @@ footer em {
   font-size: 16px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border: 1px rgb(192, 190, 190) solid;
+  border: 1px #c0bebe solid;
 }
+
 .login-modal-password {
   padding-left: 20px;
   display: block;
@@ -477,9 +507,10 @@ footer em {
   font-size: 16px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border: 1px rgb(192, 190, 190) solid;
+  border: 1px #c0bebe solid;
   border-top: none;
 }
+
 .login-modal-button {
   display: block;
   margin-left: 149px;
@@ -487,8 +518,9 @@ footer em {
   height: 40px;
   width: 300px;
   background-color: #3fa654;
-  color: white;
+  color: #fff;
 }
+
 .login-modal-action {
   display: block;
   margin-left: 149px;
@@ -497,6 +529,7 @@ footer em {
   text-align: center;
   font-size: 14px;
 }
+
 .signup-modal-button {
   display: block;
   margin-left: 149px;
@@ -505,35 +538,42 @@ footer em {
   width: 300px;
   background-image: radial-gradient(
     ellipse at center,
-    rgba(75, 102, 125, 1) 0%,
+    rgba(75, 102, 125, 1) 0,
     rgba(68, 133, 199, 1) 100%
   );
-  color: white;
+  color: #fff;
 }
+
 .register-modal-container {
   padding: 30px 20px;
 }
+
 .register-modal-name {
   font-size: 13px;
   height: 30px;
 }
+
 .register-modal-lastname {
   margin-left: 10px;
   font-size: 13px;
   height: 30px;
 }
+
 .register-modal-email {
   margin-top: 10px;
 }
+
 .register-modal-emailInput {
   padding-left: 15px;
   font-size: 13px;
   width: 290px;
   height: 30px;
 }
+
 .register-modal-password {
   margin-top: 10px;
 }
+
 .register-modal-signup-button {
   display: block;
   margin-left: 139px;
@@ -542,8 +582,8 @@ footer em {
   width: 290px;
   background-image: radial-gradient(
     ellipse at center,
-    rgba(75, 102, 125, 1) 0%,
+    rgba(75, 102, 125, 1) 0,
     rgba(68, 133, 199, 1) 100%
   );
-  color: white;
+  color: #fff;
 }

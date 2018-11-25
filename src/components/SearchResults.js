@@ -9,9 +9,12 @@ class SearchResults extends React.Component {
   componentDidMount() {
     this.props.search();
   }
+  componentWillUnmount() {
+    console.log("results component destroyed");
+  }
   render() {
     return (
-      <div className="col-xs-12 col-md-6 padding-zero">
+      <div className="col-xs-12 col-md-6 padding-zero" id="results">
         {this.props.results.map(video => {
           return (
             <SearchVideoMeta

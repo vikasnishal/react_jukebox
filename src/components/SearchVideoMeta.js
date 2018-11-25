@@ -1,9 +1,7 @@
 import React from "react";
 import playIcon from "../images/play-icon2.gif";
-
 export default function SearchVideoMeta(props) {
   const { thumbnail, title, description, id } = props;
-
   return (
     <div
       className="video"

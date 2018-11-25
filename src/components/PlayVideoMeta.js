@@ -4,6 +4,9 @@ import changeVideo from "../actionCreators/changeVideo";
 import editPlaylist from "../actionCreators/editPlaylist";
 
 class PlayVideoMeta extends React.Component {
+  componentWillUnmount() {
+    console.log("playlist element component destroyed");
+  }
   render() {
     const { title, id } = this.props;
     return (
@@ -20,7 +23,13 @@ class PlayVideoMeta extends React.Component {
         >
           delete
         </p>
-        <p className="item-title" data-ng-click="launch(video.id, video.title)">
+        <p
+          className={
+            "item-title" +
+            (id === this.props.videoId ? " playlist-video-active" : "")
+          }
+          data-ng-click="launch(video.id, video.title)"
+        >
           {title}
         </p>
       </li>
