@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/react_jukebox/static/js/runtime~main.e3d3a001.js"
   },
   {
-    "revision": "f171e8b36539733a3e97",
-    "url": "/react_jukebox/static/js/main.f171e8b3.chunk.js"
+    "revision": "5c94a8f201b602ce7c99",
+    "url": "/react_jukebox/static/js/main.5c94a8f2.chunk.js"
   },
   {
     "revision": "a2ad202b56f1ff6cc926",
     "url": "/react_jukebox/static/js/1.a2ad202b.chunk.js"
   },
   {
-    "revision": "f171e8b36539733a3e97",
+    "revision": "5c94a8f201b602ce7c99",
     "url": "/react_jukebox/static/css/main.07c77156.chunk.css"
   },
   {
-    "revision": "7394cb62a81d561b868727f01edba57d",
+    "revision": "d67b41786e63984b932d7c4194db6da5",
     "url": "/react_jukebox/index.html"
   }
 ];
