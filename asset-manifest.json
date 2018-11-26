@@ -1,15 +1,15 @@
 {
-  "main.css": "/react_jukebox/static/css/main.07b3fe81.chunk.css",
-  "main.js": "/react_jukebox/static/js/main.71c7e374.chunk.js",
-  "main.js.map": "/react_jukebox/static/js/main.71c7e374.chunk.js.map",
-  "static/js/1.f36d7696.chunk.js": "/react_jukebox/static/js/1.f36d7696.chunk.js",
-  "static/js/1.f36d7696.chunk.js.map": "/react_jukebox/static/js/1.f36d7696.chunk.js.map",
+  "main.css": "/react_jukebox/static/css/main.07c77156.chunk.css",
+  "main.js": "/react_jukebox/static/js/main.591a2067.chunk.js",
+  "main.js.map": "/react_jukebox/static/js/main.591a2067.chunk.js.map",
+  "static/js/1.a2ad202b.chunk.js": "/react_jukebox/static/js/1.a2ad202b.chunk.js",
+  "static/js/1.a2ad202b.chunk.js.map": "/react_jukebox/static/js/1.a2ad202b.chunk.js.map",
   "runtime~main.js": "/react_jukebox/static/js/runtime~main.e3d3a001.js",
   "runtime~main.js.map": "/react_jukebox/static/js/runtime~main.e3d3a001.js.map",
-  "static/css/main.07b3fe81.chunk.css.map": "/react_jukebox/static/css/main.07b3fe81.chunk.css.map",
+  "static/css/main.07c77156.chunk.css.map": "/react_jukebox/static/css/main.07c77156.chunk.css.map",
   "static/media/title-logo2.png": "/react_jukebox/static/media/title-logo2.45965589.png",
   "static/media/style.css": "/react_jukebox/static/media/final_background.d8663443.jpg",
   "index.html": "/react_jukebox/index.html",
-  "precache-manifest.aae40eb60ac53ef5f2b49ec4908df67c.js": "/react_jukebox/precache-manifest.aae40eb60ac53ef5f2b49ec4908df67c.js",
+  "precache-manifest.b1db4cc066ba58f8d12a228ce664b420.js": "/react_jukebox/precache-manifest.b1db4cc066ba58f8d12a228ce664b420.js",
   "service-worker.js": "/react_jukebox/service-worker.js"
 }
