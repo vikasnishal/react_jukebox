@@ -404,10 +404,11 @@ nav {
   color: #ac0809;
   float: right;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
   width: 80px;
   margin-right: 3px;
   border-radius: 20px;
+  margin-top: 4px;
 }
 
 .item-delete:hover {
