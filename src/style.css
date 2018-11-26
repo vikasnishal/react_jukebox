@@ -136,7 +136,9 @@ header {
   height: 80px;
   padding: 20px 0;
 }
-
+header > div {
+  padding: 0px !important;
+}
 .appBody {
   position: relative;
   width: 1100px;
@@ -203,7 +205,6 @@ nav {
 .loginLink {
   margin-top: 10px;
   font-size: 13px;
-  display: inline-block;
   cursor: pointer;
   letter-spacing: 1px;
 }
@@ -216,6 +217,7 @@ nav {
   position: relative;
   width: 1px;
   font-size: 14px;
+  margin: 0px 10px;
 }
 
 #pause,
@@ -481,16 +483,37 @@ footer em {
   float: right;
   font-style: normal;
 }
+#modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  background-color: white;
+  max-width: 500px;
+  padding: 35px 15px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
 .modal-content {
   height: 330px !important;
 }
 
 .login-modal-email {
   padding-left: 20px;
-  display: block;
-  margin-left: 149px;
-  margin-top: 30px;
   height: 50px;
   width: 300px;
   font-size: 16px;
@@ -501,8 +524,6 @@ footer em {
 
 .login-modal-password {
   padding-left: 20px;
-  display: block;
-  margin-left: 149px;
   height: 50px;
   width: 300px;
   font-size: 16px;
@@ -513,8 +534,6 @@ footer em {
 }
 
 .login-modal-button {
-  display: block;
-  margin-left: 149px;
   margin-top: 20px;
   height: 40px;
   width: 300px;
@@ -523,17 +542,19 @@ footer em {
 }
 
 .login-modal-action {
-  display: block;
-  margin-left: 149px;
   margin-top: 10px;
-  width: 300px;
   text-align: center;
   font-size: 14px;
 }
-
+.login-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
 .signup-modal-button {
-  display: block;
-  margin-left: 149px;
   margin-top: 10px;
   height: 40px;
   width: 300px;
@@ -545,30 +566,14 @@ footer em {
   color: #fff;
 }
 
-.register-modal-container {
-  padding: 30px 20px;
-}
-
-.register-modal-name {
-  font-size: 13px;
-  height: 30px;
-}
-
-.register-modal-lastname {
-  margin-left: 10px;
-  font-size: 13px;
-  height: 30px;
-}
-
-.register-modal-email {
-  margin-top: 10px;
-}
-
-.register-modal-emailInput {
-  padding-left: 15px;
-  font-size: 13px;
-  width: 290px;
-  height: 30px;
+.register-modal-input {
+  margin: 10px 0px;
+  padding-left: 20px;
+  height: 50px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px #c0bebe solid;
+  border-radius: 5px;
 }
 
 .register-modal-password {
@@ -576,15 +581,17 @@ footer em {
 }
 
 .register-modal-signup-button {
-  display: block;
-  margin-left: 139px;
   margin-top: 15px;
   height: 40px;
-  width: 290px;
+  width: 300px;
   background-image: radial-gradient(
     ellipse at center,
     rgba(75, 102, 125, 1) 0,
     rgba(68, 133, 199, 1) 100%
   );
   color: #fff;
+}
+.register-pwd-mismatch-error {
+  color: red;
+  font-size: 12px;
 }

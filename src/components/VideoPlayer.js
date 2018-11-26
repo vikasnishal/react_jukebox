@@ -34,7 +34,7 @@ class VideoPlayer extends React.Component {
     // access to player in all event handlers via event.target
     let target = event.target;
     // this.playVideo(target, this.props.playlist[0].id);
-    target.pauseVideo();
+    target.mute();
   }
   onEnd = event => {
     let target = event.target;

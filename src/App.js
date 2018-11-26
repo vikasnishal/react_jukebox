@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import fire from "./config/firebase";
 import store from "./store";
 import Header from "./components/Header.js";
 import SearchResults from "./components/SearchResults";
@@ -12,7 +13,7 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <div className="appBody">
-          <Header />
+          <Header register={this.register} />
           <div className="container">
             <div className="row">
               <SearchResults />
