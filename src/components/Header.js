@@ -21,6 +21,9 @@ class Header extends React.Component {
     fire.auth().onAuthStateChanged(user => {
       if (user) {
         let { email, displayName } = user;
+        if (!displayName) {
+          displayName = email.replace(/@.*/, "");
+        }
         this.props.setUser({ email, displayName });
       } else {
         this.props.setUser({ email: "", displayName: "" });
@@ -66,7 +69,10 @@ class Header extends React.Component {
           </div>
         )}
         {this.state.isLoginModalOpen ? (
-          <Login toggleLogin={this.toggleLogin} />
+          <Login
+            toggleLogin={this.toggleLogin}
+            toggleRegister={this.toggleRegister}
+          />
         ) : null}
         {this.state.isRegisterModalOpen ? (
           <Register toggleRegister={this.toggleRegister} />

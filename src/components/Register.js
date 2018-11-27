@@ -137,9 +137,9 @@ class Register extends React.Component {
             title="Password must contain min. 6 characters"
           />
           {this.state.showError ? (
-            <span className="register-pwd-mismatch-error">
+            <div className="register-pwd-mismatch-error">
               Passwords don't match.
-            </span>
+            </div>
           ) : null}
         </div>
         <button className="btn register-modal-signup-button" type="submit">

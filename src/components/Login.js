@@ -25,6 +25,10 @@ class Login extends React.Component {
       [event.target.name]: event.target.value
     });
   };
+  openSignupModal = () => {
+    this.props.toggleLogin();
+    this.props.toggleRegister();
+  };
   authenticateUser = event => {
     event.preventDefault();
     fire
@@ -72,11 +76,14 @@ class Login extends React.Component {
             Login
           </button>
         </form>
-        <div className="clickable login-modal-action">
+        {/* <div className="clickable login-modal-action">
           forgot your password?
-        </div>
+        </div> */}
 
-        <button className="btn signup-modal-button">
+        <button
+          className="btn signup-modal-button"
+          onClick={this.openSignupModal}
+        >
           Don't have an account? Sign up now!
         </button>
       </div>
