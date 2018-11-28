@@ -14,7 +14,7 @@ class SearchResults extends React.Component {
   }
   render() {
     return (
-      <div className="col-xs-12 col-md-6 padding-zero" id="results">
+      <div className="padding-zero" id="results">
         {this.props.results.map(video => {
           return (
             <SearchVideoMeta

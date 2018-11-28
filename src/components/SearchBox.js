@@ -12,7 +12,7 @@ class SearchBox extends React.Component {
   //   }
   render() {
     return (
-      <div className="col-md-10">
+      <div>
         <img src={logo} className="app-title" alt="page logo" />
         <form id="search" onSubmit={this.props.handleSearchResults}>
           <input

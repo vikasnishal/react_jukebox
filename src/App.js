@@ -14,13 +14,11 @@ class App extends React.Component {
       <Provider store={store}>
         <div className="appBody">
           <Header register={this.register} />
-          <div className="container">
-            <div className="row">
-              <SearchResults />
-              <div className="col-xs-12 col-md-6 padding-zero">
-                <VideoPlayer />
-                <Playlist />
-              </div>
+          <div className="app-container  container">
+            <SearchResults />
+            <div className="padding-zero">
+              <VideoPlayer />
+              <Playlist />
             </div>
           </div>
         </div>

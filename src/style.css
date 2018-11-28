@@ -135,6 +135,8 @@ header {
   color: #fff;
   height: 80px;
   padding: 20px 0;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
 }
 header > div {
   padding: 0px !important;
@@ -143,6 +145,7 @@ header > div {
   position: relative;
   width: 1100px;
   margin: auto;
+  padding-bottom: 30px;
 }
 
 .app-title {
@@ -158,7 +161,10 @@ header > div {
   width: 1100px;
   padding: 0;
 }
-
+.app-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .overlay {
   display: block;
   position: fixed;
@@ -271,7 +277,6 @@ nav {
 
 #results {
   background: #eff0f2;
-  height: 944px;
   overflow-x: hidden;
 }
 
@@ -280,33 +285,37 @@ nav {
   max-height: 30px;
   opacity: 0;
   transition: opacity 1s;
-  float: right;
-  position: relative;
-  top: -25px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .video {
   cursor: pointer;
   min-height: 110px;
   padding: 10px;
-  padding-left: 140px;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
-
+.video > div {
+  padding: 0px 10px;
+}
 .video:nth-child(2n-1) {
   background: #fff;
 }
 
 .video-image {
-  float: left;
   left: 10px;
-  position: absolute;
   top: 10px;
 }
 
 .video-title {
   padding-top: 5px;
   font-size: 17px;
+  line-height: 1.2em;
+  height: 2.8em;
+  overflow: hidden;
 }
 
 .video-author {
@@ -318,7 +327,9 @@ nav {
 .video-description {
   color: #727785;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.5em;
+  height: 3em;
+  overflow: hidden;
 }
 
 .video:hover {
@@ -337,10 +348,7 @@ nav {
 #player,
 #playlist {
   background: #fff;
-  height: 480px;
-  overflow: hidden;
   margin-left: 0;
-  top: 80px;
 }
 
 #player {
@@ -351,8 +359,6 @@ nav {
   background: #22242a;
   color: #727785;
   font-size: 16px;
-  height: 379px;
-  overflow-x: hidden;
 }
 
 #current {
@@ -369,7 +375,7 @@ nav {
 
 #playlist ol {
   border-bottom: 1px solid #33363f;
-  height: 379px;
+  height: 400px;
   overflow-x: hidden;
 }
 
@@ -408,7 +414,7 @@ nav {
   text-align: center;
   padding: 15px 0;
   width: 80px;
-  margin-right: 3px;
+  margin-right: 15px;
   border-radius: 20px;
   margin-top: 4px;
 }

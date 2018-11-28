@@ -12,8 +12,12 @@ export default function SearchVideoMeta(props) {
       {thumbnail ? (
         <img className="video-image" src={thumbnail} alt="video " />
       ) : null}
-      <p className="video-title">{title}</p>
-      {description ? <p className="video-description">{description}</p> : null}
+      <div>
+        <p className="video-title">{title}</p>
+        {description ? (
+          <p className="video-description">{description}</p>
+        ) : null}
+      </div>
       {thumbnail ? (
         <img
           src={playIcon}

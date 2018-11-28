@@ -20,6 +20,7 @@ class Header extends React.Component {
   authenicationListener() {
     fire.auth().onAuthStateChanged(user => {
       if (user) {
+        console.log(user.uid);
         let { email, displayName } = user;
         if (!displayName) {
           displayName = email.replace(/@.*/, "");
@@ -45,10 +46,10 @@ class Header extends React.Component {
   };
   render() {
     return (
-      <header className="row header-row">
+      <header className="header-row">
         <SearchBox />
         {this.props.user.displayName ? (
-          <div className="col-md-2">
+          <div>
             <span className=" loginLink">
               {this.props.user.displayName.toUpperCase()}
             </span>
@@ -58,7 +59,7 @@ class Header extends React.Component {
             </span>
           </div>
         ) : (
-          <div className="col-md-2">
+          <div>
             <span className=" loginLink" onClick={this.toggleLogin}>
               LOGIN
             </span>
