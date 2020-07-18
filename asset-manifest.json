@@ -1,15 +1,15 @@
 {
-  "main.css": "/react_jukebox/static/css/main.1a212919.chunk.css",
-  "main.js": "/react_jukebox/static/js/main.89fb53c1.chunk.js",
-  "main.js.map": "/react_jukebox/static/js/main.89fb53c1.chunk.js.map",
-  "static/js/1.a2ad202b.chunk.js": "/react_jukebox/static/js/1.a2ad202b.chunk.js",
-  "static/js/1.a2ad202b.chunk.js.map": "/react_jukebox/static/js/1.a2ad202b.chunk.js.map",
-  "runtime~main.js": "/react_jukebox/static/js/runtime~main.e3d3a001.js",
-  "runtime~main.js.map": "/react_jukebox/static/js/runtime~main.e3d3a001.js.map",
-  "static/css/main.1a212919.chunk.css.map": "/react_jukebox/static/css/main.1a212919.chunk.css.map",
-  "static/media/title-logo2.png": "/react_jukebox/static/media/title-logo2.45965589.png",
-  "static/media/style.css": "/react_jukebox/static/media/final_background.d8663443.jpg",
+  "main.css": "/react_jukebox/static/css/main.c421cc7a.chunk.css",
+  "main.js": "/react_jukebox/static/js/main.cd49d239.chunk.js",
+  "main.js.map": "/react_jukebox/static/js/main.cd49d239.chunk.js.map",
+  "runtime~main.js": "/react_jukebox/static/js/runtime~main.e054d529.js",
+  "runtime~main.js.map": "/react_jukebox/static/js/runtime~main.e054d529.js.map",
+  "static/js/2.674afcb2.chunk.js": "/react_jukebox/static/js/2.674afcb2.chunk.js",
+  "static/js/2.674afcb2.chunk.js.map": "/react_jukebox/static/js/2.674afcb2.chunk.js.map",
   "index.html": "/react_jukebox/index.html",
-  "precache-manifest.7d2ee11fe344f8b307aab3b3cb3105d8.js": "/react_jukebox/precache-manifest.7d2ee11fe344f8b307aab3b3cb3105d8.js",
-  "service-worker.js": "/react_jukebox/service-worker.js"
+  "precache-manifest.37241243d74f2c10898b1a6ccab4e18e.js": "/react_jukebox/precache-manifest.37241243d74f2c10898b1a6ccab4e18e.js",
+  "service-worker.js": "/react_jukebox/service-worker.js",
+  "static/css/main.c421cc7a.chunk.css.map": "/react_jukebox/static/css/main.c421cc7a.chunk.css.map",
+  "static/media/style.css": "/react_jukebox/static/media/final_background.d8663443.jpg",
+  "static/media/title-logo2.png": "/react_jukebox/static/media/title-logo2.45965589.png"
 }
