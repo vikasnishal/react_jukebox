@@ -3,39 +3,30 @@ import { connect } from "react-redux";
 import changeVideo from "../actionCreators/changeVideo";
 import editPlaylist from "../actionCreators/editPlaylist";
 
-class PlayVideoMeta extends React.Component {
-  componentWillUnmount() {
-    console.log("playlist element component destroyed");
-  }
-  render() {
-    const { title, id } = this.props;
-    return (
-      <li
-        className="playlist-video"
-        onClick={this.props.playVideo}
+const PlayVideoMeta = props => {
+  const { title, id } = props;
+
+  return (
+    <li className="playlist-video" onClick={props.playVideo} data-id={id}>
+      <p
+        className="item-delete"
         data-id={id}
+        data-delete="true"
+        onClick={props.deleteVideo}
       >
-        <p
-          className="item-delete"
-          data-id={id}
-          data-delete="true"
-          onClick={this.props.deleteVideo}
-        >
-          delete
-        </p>
-        <p
-          className={
-            "item-title" +
-            (id === this.props.videoId ? " playlist-video-active" : "")
-          }
-          data-ng-click="launch(video.id, video.title)"
-        >
-          {title}
-        </p>
-      </li>
-    );
-  }
-}
+        delete
+      </p>
+      <p
+        className={
+          "item-title" + (id === props.videoId ? " playlist-video-active" : "")
+        }
+      >
+        {title}
+      </p>
+    </li>
+  );
+};
+
 const mapDispatchToProps = dispatch => ({
   playVideo(event) {
     dispatch(changeVideo(event.currentTarget.dataset.id));

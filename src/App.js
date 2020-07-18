@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import fire from "./config/firebase";
 import store from "./store";
 import Header from "./components/Header.js";
 import SearchResults from "./components/SearchResults";
@@ -12,14 +13,12 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <div className="appBody">
-          <Header />
-          <div className="container">
-            <div className="row">
-              <SearchResults />
-              <div className="col-xs-12 col-md-6 padding-zero">
-                <VideoPlayer />
-                <Playlist />
-              </div>
+          <Header register={this.register} />
+          <div className="app-container  container">
+            <SearchResults />
+            <div className="padding-zero">
+              <VideoPlayer />
+              <Playlist />
             </div>
           </div>
         </div>

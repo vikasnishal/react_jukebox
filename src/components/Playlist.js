@@ -1,24 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
-import PlayVideoMeta from "./PlayVideoMeta";
+import PlayVideoMetaPure from "./PlayVideoMetaPure";
 import setPlaylist from "../actionCreators/editPlaylist";
 import changeVideo from "../actionCreators/changeVideo";
 
 class Playlist extends React.Component {
   componentDidMount() {
     this.props.getPlaylist();
-    setTimeout(() => {
-      this.props.setDefaultVideo(this.props.playlist[0].id);
-    }, 1);
   }
-
+  componentDidUpdate() {
+    console.log("playlist comp updated");
+  }
   render() {
     return (
       <div id="playlist">
         <ol>
           {this.props.playlist.map(video => {
             return (
-              <PlayVideoMeta
+              <PlayVideoMetaPure
                 key={video.id}
                 id={video.id}
                 title={video.title}
@@ -36,10 +35,7 @@ const mapStateToProps = ({ playlist = [], videoId }) => ({
   videoId
 });
 
-export default connect(
-  mapStateToProps,
-  {
-    getPlaylist: setPlaylist,
-    setDefaultVideo: changeVideo
-  }
-)(Playlist);
+export default connect(mapStateToProps, {
+  getPlaylist: setPlaylist,
+  setDefaultVideo: changeVideo
+})(Playlist);

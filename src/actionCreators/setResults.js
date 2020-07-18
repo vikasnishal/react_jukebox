@@ -5,7 +5,7 @@ export default function setResultsFunction() {
     axios
       .get("https://www.googleapis.com/youtube/v3/search", {
         params: {
-          key: "AIzaSyBMBhKQT8s8pJq9AkFbRfP66KvgktwgLBA",
+          key: "AIzaSyDH6OIM74sXrUs4_t-2cmfotq3PVRl_CfM",
           type: "video",
           maxResults: "8",
           order: "viewCount",
