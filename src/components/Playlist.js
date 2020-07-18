@@ -7,9 +7,6 @@ import changeVideo from "../actionCreators/changeVideo";
 class Playlist extends React.Component {
   componentDidMount() {
     this.props.getPlaylist();
-    setTimeout(() => {
-      this.props.setDefaultVideo(this.props.playlist[0].id);
-    }, 1);
   }
   componentDidUpdate() {
     console.log("playlist comp updated");
@@ -38,10 +35,7 @@ const mapStateToProps = ({ playlist = [], videoId }) => ({
   videoId
 });
 
-export default connect(
-  mapStateToProps,
-  {
-    getPlaylist: setPlaylist,
-    setDefaultVideo: changeVideo
-  }
-)(Playlist);
+export default connect(mapStateToProps, {
+  getPlaylist: setPlaylist,
+  setDefaultVideo: changeVideo
+})(Playlist);
